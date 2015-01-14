@@ -1,0 +1,27 @@
+
+body {
+  border-top: 10px solid rgba(black, 0.65);
+}
+
+.page-content,
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  padding-left: 20px;
+  padding-bottom: 0px;
+
+  & nav {
+    padding-top: 2em;
+    & ul {
+      margin-left: 10px;
+    }
+    & ul li {
+      border-left: 1px solid rgba(black, 0.3);
+      border-right: 1px solid rgba(black, 0.3);
+      border-top: 1px solid rgba(black, 0.3);
+    }
+  }
+}

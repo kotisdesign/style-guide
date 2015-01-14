@@ -1,0 +1,25 @@
+// COLORS
+
+$default-text-color: #333;
+$kotis-orange: #FB4F14;
+$bright-orange: #ff6000;
+$kotis-blue: #36b;
+$bright-blue: #06f;
+$primary-color: #333;
+
+$danger-text: rgb(202, 60, 60);
+
+$opacity: 0.6;
+$half-opacity: $opacity*0.5;
+$estore_aws_url: "https://kotis-estores.s3.amazonaws.com/storefront";
+
+// MEDIA QUERY SCREEN SIZE
+$small-screen-min: 568px;
+$medium-screen-min: 768px;
+$large-screen-min: 1024px;
+$xlarge-screen-min: 1280px;
+
+$xsmall-screen-max: 567px;
+$small-screen-max: 767px;
+$medium-screen-max: 1023px;
+$large-screen-max: 1279px;

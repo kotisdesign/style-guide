@@ -1,0 +1,42 @@
+.pure-button {
+    text-shadow: 0 1px 1px rgba(black, 0.2);
+    border-radius: 4px;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white !important;
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* red */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* lt blue */
+}
+.button-xsmall {
+    font-size: 70%;
+}
+
+.button-small {
+    font-size: 85%;
+}
+
+.button-large {
+    font-size: 115%;
+}
+
+.button-xlarge {
+    font-size: 125%;
+}

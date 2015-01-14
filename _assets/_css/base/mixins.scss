@@ -1,0 +1,53 @@
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin thumbnail-hover-box($hover-color, $square-size: 55px, $border-color: rgba(black, 0.3)) {
+    border: 1px solid $border-color;
+    vertical-align: top;
+    display: inline-block;
+    font-size:0px;
+    img {
+      max-width: $square-size;
+      max-height: $square-size;
+    }
+    &:hover {
+      @include box-shadow(0, 0, 5px, $hover-color)
+    }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+%product-image-container {
+  height: 200px;
+  font-size:0px;
+  & span {
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+  }
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+  }
+}
+
+%default-links {
+  color: $kotis-orange;
+  &:hover {
+    color: $bright-orange;
+  }
+}
+
+%admin-section-header {
+  border-bottom: 1px solid $default-text-color;
+  margin-bottom: 8px;
+}
