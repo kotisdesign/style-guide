@@ -15,4 +15,4 @@ markdown: kramdown
 sass:
   sass_dir: _assets/_css
 
-highlighter: rouge
+highlighter: pygments #rouge
