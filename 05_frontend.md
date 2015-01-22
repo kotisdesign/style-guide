@@ -21,7 +21,7 @@ First and foremost if something ever looks bad, please say something.
 
 ## Links
 
-* Primary link color is cyan blue #00a6ce with a hover of #007da4
+* Primary link color is cyan blue #<span class="primary-blue">00a6ce</span> with a hover of #<span class="hover-blue">007da4</span>
 
 ## Forms
 
@@ -45,8 +45,6 @@ if there are form errors, it is not clear what the label is
   * If there is a mix of required and optional fields, put an nbsp; and asterisk after the label 
   for the required field in the same color as the label
 
-
-
 ## Buttons
 
 * .125em rounded corners
@@ -57,17 +55,17 @@ if there are form errors, it is not clear what the label is
 
 ### Button Colors
 
-* Primary - orange (ff4c00)
+* Primary - orange (<span class="primary-orange">ff4c00</span>)
   * Main action buttons like "save"; most POST actions
-* Primary - cyan blue (00a6ce)
+* Primary - cyan blue (<span class="primary-blue">00a6ce</span>)
   * Most GET actions; or POST actions with only light edits and/or if there is already an orange 
   button and we need to differentiate
-* Secondary - gray (999)
+* Secondary - gray (<span class="secondary-gray">999</span>)
   * GET actions if there is already a cyan button
-* Other - red (f6323e)
+* Other - red (<span class="other-red">f6323e</span>)
   * Not a standard Kotis color, but ok to use if we need a "delete" or "cancel" or just general 
   warning button
-* Other - green (00b44f)
+* Other - green (<span class="other-green">00b44f</span>)
   * Try not to use this unless we need to, not a standard Kotis color
 * Try to use the above color concepts very closely for internal uses. On an external page if the 
 buttons look bad or conflict with other graphics, please say something
@@ -108,12 +106,12 @@ example)
 
 ## Flash Messages
 
-* Success messages should have a full-width green background (00b44f)
+* Success messages should have a full-width green background (<span class="other-green">00b44f</span>)
   * black text
   * no border
   * .5em padding
   * .125em rounded corners
-* Failure/warning messages should be the same except red background (f6323e)
+* Failure/warning messages should be the same except red background (<span class="other-red">f6323e</span>)
 
 ## Headers
 
