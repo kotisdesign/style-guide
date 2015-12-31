@@ -9,10 +9,15 @@ baseurl: "/style-guide" # the subpath of your site, e.g. /blog/
 url: "http://kotisdesign.github.io" # the base hostname & protocol for your site
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+
+redcarpet:
+  extensions: ['strikethrough',
+               'no_intra_emphasis', 'tables', 'autolink',
+               'safe_links_only', 'no_styles', 'with_toc_data' ]
 
 # SASS settings
 sass:
   sass_dir: _assets/_css
 
-highlighter: pygments #rouge
+highlighter: pygments

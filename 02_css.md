@@ -43,18 +43,19 @@ assets/stylesheets
 * Use Sprockets to require files for precompilation and use with the Rails asset
   pipeline.  However, you should use a file with `@import` directives to control
   which files are included and in which order:
-* {:.codeblock} {% highlight css %}
+* {% highlight css %}
     /* using the example above */
     /* application.css */
 
     /*
-     *= require jquery.ui.all
-     *= require font-awesome
-     *= require main
-     *= require_self
-     */
+ *= require jquery.ui.all
+ *= require font-awesome
+ *= require main
+ *= require_self
+ */
   {% endhighlight %}
-* {:.codeblock} {% highlight css %}
+
+* {% highlight css %}
     /* main.css */
     @import "base/variables";
     @import "base/mixins";
@@ -73,7 +74,7 @@ assets/stylesheets
 
 * Use meaningful or generic id/class names instead of presentational names.  Names
   should describe the *purpose*  of the element in question.
-* {:.codeblock} {% highlight css %}
+* {% highlight css %}
     /* good */
     #header {}
     #footer {}
@@ -91,7 +92,7 @@ assets/stylesheets
 * When naming classes and IDs, split words using hyphens, not underscores.
 * When styling a component, prefer an element + class namespace over element + id.
   Use as little specificity as possible.
-* {:.codeblock} {% highlight html %}
+* {% highlight html %}
     <ul class="category-list">
       <li class="item">Category 1</li>
       <li class="item">
@@ -100,7 +101,7 @@ assets/stylesheets
     </ul>
   {% endhighlight %}
 
-* {:.codeblock} {% highlight css %}
+* {% highlight css %}
     .category-list { /* element + class namespace */
 
       /* this selects only direct descendants */
@@ -117,14 +118,14 @@ assets/stylesheets
 
 * If you're using an ID selector, ensure you do not use more than one in your
   rule declaration:
-* {:.codeblock} {% highlight css %}
+* {% highlight css %}
     /* this is too specific */
     #header .search-bar #search-results {}
   {% endhighlight %}
 
 * Classes named `disabled`, `danger`, `hover`, `selected`, `active` should
   always be namespaced by an element.
-* {:.codeblock} {% highlight css %}
+* {% highlight css %}
     /* good */
     option.selected {}
     button.danger {}
@@ -160,8 +161,8 @@ assets/stylesheets
   reconsider the specificity or the layout.
 * Nested rules should come AFTER the properties from the parent rule.
 
-* {:.codeblock} {% highlight css %}
-    // Example of good basic formatting practices
+* {% highlight scss %}
+    /* Example of good basic formatting practices */
     .styleguide-format {
       background-color: rgba(0, 0, 0, .5);
       border: 1px solid #0f0;
@@ -171,7 +172,7 @@ assets/stylesheets
       }
     }
 
-    // Example of individual selectors getting their own lines
+    /* Example of individual selectors getting their own lines */
     .multiple,
     .classes,
     .get-new-lines {

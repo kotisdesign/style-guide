@@ -7,11 +7,11 @@ permalink: /coffeescript/
 # CoffeeScript
 
 CoffeeScript is our preferred scripting language for the Rails conversion.  You
-should make an attempt use CoffeeScript,
-though some vendor-specific code may be difficult and confusing to integrate
-and Javascript may be easier and more readable. If you're using Javascript,
-please leave a brief block-comment note at the top of the file with the reason
-for using JS.  This will allow us to go back at a later time and understand
+should make an attempt use CoffeeScript, though some vendor-specific code may be
+difficult and confusing to integrate and Javascript may be easier and more readable.
+If you're using Javascript, please leave a brief block-comment note at the top of
+the file with the reason for using JS.  This will allow us to go back at a later
+time and understand why a decision was made.
 
 ## Style
 
@@ -28,14 +28,14 @@ for using JS.  This will allow us to go back at a later time and understand
 
 * When declaring functions, use a single space after the closing parentheses
   of the argument list.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     my_method = (arg1, arg2) -> # good
     my_method = (arg1, arg2)-> # bad
   {% endhighlight %}
 
 * When chaining method calls and the code doesn't fit on one line, EVERY call
   should be on a separate line and indented one level:
-* {:.codeblock} {% highlight coffeescript %}
+* {% highlight coffeescript %}
     [1..3]
       .map((x) -> x * x)
       .concat([10..12])
