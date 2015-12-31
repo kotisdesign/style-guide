@@ -2,7 +2,6 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "font-awesome.css";
 @import "purecss/pure-min";
 @import "purecss/grids-responsive-min";
 @import "base/variables";
@@ -17,4 +16,3 @@
 @import "styles/markdown";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
