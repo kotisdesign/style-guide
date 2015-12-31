@@ -23,7 +23,7 @@ permalink: /javascript/
 
 * Nested functions are okay.
 * Do not declare functions within blocks.
-* {:.codeblock} {% highlight javascript %}
+* {% highlight javascript %}
     // bad
     if (x) {
       function foo() {};

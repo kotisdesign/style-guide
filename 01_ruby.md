@@ -11,9 +11,9 @@ permalink: /ruby/
 Much of the Ruby section of this style guide comes from the semi-official
 [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).  Not all styles
 suggested in that guide are applicable, though, and this page should take priority.
-\\
-\\
-Remember to be consistent and ensure readable code!
+
+
+Remember to **be consistent** and ensure readable code!
 
 ## Style
 
@@ -22,19 +22,18 @@ Remember to be consistent and ensure readable code!
 * End your file with an empty line.
 * Your editor should be set to use unix-style line endings.
     * In Sublime Text, specify a setting:
-    * {:.codeblock} {% highlight ruby %}
+    * {% highlight ruby %}
         "default_line_ending": "unix"
       {% endhighlight %}
-
 * Prefer lines under 80 characters. Keep all lines under 100.
     * In Sublime Text, rulers are a good way of keeping track.
       Specify a setting:
-    * {:.codeblock} {% highlight ruby %}
+    * {% highlight ruby %}
         "rulers": [80, 100]
       {% endhighlight %}
 
 * Do not use block comments.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     =begin
     comment line
@@ -47,21 +46,21 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * Use spaces after operators, commas, semicolons, and curly braces.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     2 + 2 = 4
     first, second = 1, 2
     { first: value, second: value }
   {% endhighlight %}
 
 * Do not use spaces after brackets, parentheses, or `!`.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     [1, 2, 3].length
     method(argument).upcase
     !space_after_bang
   {% endhighlight %}
 
 * Avoid single line methods (including empty body methods).
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # good
     def my_good_method
       body
@@ -75,7 +74,7 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * When using `case` statements, indent `when` as deep as `case`.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     case tracking_number
     when begins_with('1Z') then 'UPS'
     when begins_with('5000') then 'USPS'
@@ -84,7 +83,7 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * When assigning a conditional result to a variable, preserve alignment:
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # good
     shipping_method = if shipping_speed == 'Express'
                         'UPS Next Day Air'
@@ -102,7 +101,7 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * Use empty lines between methods and to split methods into logical paragraphs.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     def first_method
       data = initialize(options)
 
@@ -117,7 +116,7 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * When continuing a chained method invocation on another line keep the `.` on the second line.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # good
     one.two.three
       .four
@@ -128,7 +127,7 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * Align the parameters of a method call if they span more than one line.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # starting point (line is too long)
     def send_mail(source)
       Mailer.deliver(to: 'bob@example.com', from: 'us@example.com', subject: 'Important message', body: source.text)
@@ -165,7 +164,7 @@ Remember to be consistent and ensure readable code!
 
 * Use `def` with parentheses when there are arguments. Omit the parentheses
   when the method doesn't accept any arguments.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     def some_method
       ...
     end
@@ -180,7 +179,7 @@ Remember to be consistent and ensure readable code!
   adding a level of indirection), but with a twist - `for` doesn't introduce a
   new scope (unlike `each`) and variables defined in its block will be visible
   outside it.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     arr = [1, 2, 3]
 
     # bad
@@ -193,7 +192,7 @@ Remember to be consistent and ensure readable code!
   {% endhighlight %}
 
 * Never use `then` for multi-line `if/unless`.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     if some_condition then
       ...
@@ -208,7 +207,7 @@ Remember to be consistent and ensure readable code!
 * AVOID the ternary operator EXCEPT in cases where all expressions are trivial.
   Favor the operator, however, over `if/then/else/end` constructs for single
   line conditionals:
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     result = if some_condition then something else something_else end
 
@@ -219,7 +218,7 @@ Remember to be consistent and ensure readable code!
 * Use one expression per branch in a ternary operator. This also means that
   ternary operators MUST NOT be nested. Prefer `if/else` constructs in these
   cases.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     some_condition ? (nested_condition ? nested_something : nested_something_else) : something_else
 
@@ -233,7 +232,7 @@ Remember to be consistent and ensure readable code!
 
 * Avoid multi-line ternary operator. Favor `if/unless` construct.
 * Favor `if/unless` usage when you have a single-line body.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     if some_condition
       do_something
@@ -253,7 +252,7 @@ Remember to be consistent and ensure readable code!
 
 * Use spaces around the `=` operator when assigning default values to method
   parameters:
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     def some_method(arg1=:default, arg2=nil, arg3=[])
       # do something...
@@ -267,7 +266,7 @@ Remember to be consistent and ensure readable code!
 
 * Using the return value of = (an assignment) is ok.  Avoid using the return
   value in the second part of a conditional:
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     if (v = array.grep(/foo/)) ...
 
@@ -289,7 +288,7 @@ Remember to be consistent and ensure readable code!
 * Never use `||=` to set boolean values. (Think about what happens when the first
   value is falsey?)
 * Never put a space between a method and it's opening parentheses.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     f (3 + 2) + 1
 
@@ -299,7 +298,7 @@ Remember to be consistent and ensure readable code!
 
 * Following the rule above, if the first argument begins with an open
   parentheses, always use parentheses in the method invocation.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     f((3 + 2) + 1)
   {% endhighlight %}
 
@@ -311,7 +310,7 @@ Remember to be consistent and ensure readable code!
 
 * Use guard clauses when you can assert invalid data.  Bail out of the function
   as soon as possible.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     def my_method(argument)
       return unless argument
       do_something_with(argument)
@@ -330,7 +329,7 @@ Remember to be consistent and ensure readable code!
 * Use `CamelCase` for classes and modules.
 * Use `SCREAMING_SNAKE_CASE` for constants.
 * Methods that return a boolean value should end in a question mark.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     def complete?
       art_approved && quantities_submitted
     end
@@ -349,7 +348,7 @@ Remember to be consistent and ensure readable code!
 
 * Indent the `public`, `protected`, and `private` methods as much the method
   definitions they apply to. Leave one blank line above them.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     class SomeClass
       def public_method
         ...
@@ -381,7 +380,7 @@ Remember to be consistent and ensure readable code!
 * Do not pad string interpolation code.
 * Prefer double-quoted strings, unless your string contains a quotation mark or
   escape characters that you want to suppress.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # bad
     name = 'Kotis'
 
@@ -394,7 +393,7 @@ Remember to be consistent and ensure readable code!
 
 * Be careful with `^` and `$` as they match start/end of line, not string
   endings. If you want to match the whole string use: `\A` and `\z`.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     string = "some injection\nusername"
     string[/^username$/]   # matches
     string[/\Ausername\z/] # doesn't match
@@ -404,7 +403,7 @@ Remember to be consistent and ensure readable code!
 
 * Prefer keyword arguments over "options-hash-as-arguments" style.
 * Prefer keyword arguments when a method's arguments are non-obvious when called:
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     # instead of this
     def submit_order(user, employee = false)
       ...
@@ -426,7 +425,7 @@ Use RSpec, capybara-webkit, FactoryGirl, and fuubar rspec formatter in your
 applications.
 
 * Prefer lazy-loading objects with objects that can be shared between tests.
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     let(:ups_params) do
       { origin_zip: "98103", weight: "5", shipping_method: "UPS Ground" }
     end
@@ -442,7 +441,7 @@ applications.
 ## Miscellaneous
 
 * Default Sublime Text Settings:
-* {:.codeblock} {% highlight ruby %}
+* {% highlight ruby %}
     "default_line_ending": "unix",
     "rulers":
     [
@@ -454,4 +453,3 @@ applications.
     "trim_trailing_white_space_on_save": true,
     "ensure_newline_at_eof_on_save": true
   {% endhighlight %}
-
