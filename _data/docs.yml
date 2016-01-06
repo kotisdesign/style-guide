@@ -1,0 +1,23 @@
+- title: Ruby
+  docs:
+  - ruby
+
+- title: CSS
+  docs:
+  - css
+
+- title: Javascript
+  docs:
+  - javascript
+
+- title: CoffeeScript
+  docs:
+  - coffeescript
+
+- title: Front End
+  docs:
+  - frontend
+
+- title: Git
+  docs:
+  - git

@@ -6,11 +6,12 @@
     <div class="pure-u-1">
       <nav class="pure-menu pure-menu-open pure-menu-horizontal">
         <ul>
-          {% for page in site.pages %}
-            {% if page.title %}
-            <li>
-              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            </li>
+          {% for section in site.data.docs %}
+            {% if section.title %}
+              {% assign item_url = section.docs.first | prepend: "/docs/" | append: "/" %}
+              <li>
+                <a href="{{ item_url | prepend: site.baseurl }}">{{ section.title }}</a>
+              </li>
             {% endif %}
           {% endfor %}
         </ul>
