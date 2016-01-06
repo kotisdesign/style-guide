@@ -6,12 +6,12 @@
     <div class="pure-u-1">
       <nav class="pure-menu pure-menu-horizontal">
         <ul class="pure-menu-list">
-          {% for section in site.data.docs %}
-            {% if section.title %}
-              {% assign item_url = section.docs.first | prepend: "/docs/" | append: "/" %}
+          {% for group in site.data.docs %}
+            {% if group.title %}
+              {% assign item_url = group.docs.first | prepend: "/docs/" | append: "/" %}
               <li class="pure-menu-item">
                 <a class="pure-menu-link" href="{{ item_url | prepend: site.baseurl }}">
-                  {{ section.title }}
+                  {{ group.title }}
                 </a>
               </li>
             {% endif %}

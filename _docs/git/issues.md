@@ -1,6 +1,8 @@
 ---
+collection: git
 layout: page-with-sidebar
 title: Git - Issues
+sidebar_title: Issues
 permalink: /docs/git/issues/
 ---
 

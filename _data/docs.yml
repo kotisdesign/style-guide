@@ -1,23 +1,32 @@
-- title: Ruby
+- collection: ruby
+  title: Ruby
   docs:
   - ruby
 
-- title: CSS
+- collection: css
+  title: CSS
   docs:
   - css
 
-- title: Javascript
+- collection: javascript
+  title: Javascript
   docs:
   - javascript
 
-- title: CoffeeScript
+- collection: coffeescript
+  title: CoffeeScript
   docs:
   - coffeescript
 
-- title: Front End
+- collection: frontend
+  title: Front End
   docs:
   - frontend
 
-- title: Git
+- collection: git
+  title: Git
   docs:
   - git
+  - git/branches
+  - git/issues
+  - git/pull-requests

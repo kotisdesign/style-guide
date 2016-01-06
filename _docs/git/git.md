@@ -1,6 +1,8 @@
 ---
+collection: git
 layout: page-with-sidebar
 title: Git
+sidebar_title: "Introduction and<br> General Concepts"
 permalink: /docs/git/
 ---
 # Git - Introduction and General Concepts

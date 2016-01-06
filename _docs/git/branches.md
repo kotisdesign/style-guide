@@ -1,6 +1,8 @@
 ---
+collection: git
 layout: page-with-sidebar
 title: Git - Branches
+sidebar_title: Branches
 permalink: /docs/git/branches/
 ---
 

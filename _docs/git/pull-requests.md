@@ -1,6 +1,8 @@
 ---
+collection: git
 layout: page-with-sidebar
 title: Git - Pull Requests
+sidebar_title: Pull Requests
 permalink: /docs/git/pull-requests/
 ---
 # Git - Pull Requests
