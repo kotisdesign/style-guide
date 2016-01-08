@@ -18,6 +18,8 @@ Branch names should always start with a *hotfix-* prefix. They should also:
 - Be 3-5 words
 - Descriptive of the problem
 - Not repetitive
+- Always use dashes as word separators, even in class/property names
+  (no snake_case or CamelCase)
 
 Good names:
 
@@ -33,6 +35,7 @@ Okay names:
 Not so good names:
 
 - *hotfix-showcase-request-prematurely-setting-ready-to-approve*
+- *hotfix-ShowcaseRequest-updated_at*
 
 ## Features
 
@@ -48,10 +51,12 @@ Branch names should always start with a *feature-* prefix.  They should also:
 - Be 3-5 words
 - Descriptive of the problem
 - Not repetitive
+- Always use dashes as word separators, even in class/property names
+  (no snake_case or CamelCase)
 
 Good names:
 
-- *feature-30dtp-updates
+- *feature-30dtp-updates*
 - *feature-fix-showcase-product-links*
 - *feature-remove-id-dropdown*
 - *feature-copy-product-associations*
@@ -65,6 +70,8 @@ Not so good names:
 
 - *feature-address-styling*
   - Why? This branch actually adds a way to skip address validation.
+- *feature-add-finalized_at-to-Order*
+  - Why? Uses mixed case for properties and classes. Always use lowercase and dashes.
 
 ___
 
