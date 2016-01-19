@@ -21,3 +21,7 @@ sass:
   sass_dir: _assets/_css
 
 highlighter: pygments
+
+collections:
+  docs:
+    output: true

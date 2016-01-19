@@ -4,13 +4,16 @@
       <h1><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
     </div>
     <div class="pure-u-1">
-      <nav class="pure-menu pure-menu-open pure-menu-horizontal">
-        <ul>
-          {% for page in site.pages %}
-            {% if page.title %}
-            <li>
-              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            </li>
+      <nav class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+          {% for group in site.data.docs %}
+            {% if group.title %}
+              {% assign item_url = group.docs.first | prepend: "/docs/" | append: "/" %}
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="{{ item_url | prepend: site.baseurl }}">
+                  {{ group.title }}
+                </a>
+              </li>
             {% endif %}
           {% endfor %}
         </ul>

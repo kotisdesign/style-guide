@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CoffeeScript
-permalink: /coffeescript/
+permalink: /docs/coffeescript/
 ---
 
 # CoffeeScript

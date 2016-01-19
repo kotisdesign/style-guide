@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Front End
-permalink: /frontend/
+permalink: /docs/frontend/
 ---
 
 # Front End

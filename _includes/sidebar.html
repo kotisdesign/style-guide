@@ -1,0 +1,19 @@
+
+<div class="pure-menu">
+  <ul class="pure-menu-list">
+    {% for group in site.data.docs %}
+      {% if group.docs and group.docs.size > 1 %}
+        <span class="pure-menu-heading">{{ group.title }}</span>
+        {% for item in group.docs %}
+        {% assign item_url = item | prepend: "/docs/" | append: "/" %}
+        {% assign p = site.docs | where: "url", item_url | first %}
+        <li class="pure-menu-item">
+          <a href="{{ site.baseurl }}{{ p.url }}" class="pure-menu-link">
+            {{ p.sidebar_title }}
+          </a>
+        </li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
