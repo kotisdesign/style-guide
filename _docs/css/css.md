@@ -43,27 +43,28 @@ assets/stylesheets
 * Use Sprockets to require files for precompilation and use with the Rails asset
   pipeline.  However, you should use a file with `@import` directives to control
   which files are included and in which order:
-* {% highlight css %}
-    /* using the example above */
-    /* application.css */
 
-    /*
+{% highlight css %}
+/* using the example above */
+/* application.css */
+
+/*
  *= require jquery.ui.all
  *= require font-awesome
  *= require main
  *= require_self
  */
-  {% endhighlight %}
+{% endhighlight %}
 
-* {% highlight css %}
-    /* main.css */
-    @import "base/variables";
-    @import "base/mixins";
-    @import "base/global-styles";
+{% highlight css %}
+  /* main.css */
+  @import "base/variables";
+  @import "base/mixins";
+  @import "base/global-styles";
 
-    @import "styles/carts";
-    @import url(//fonts.googleapis.com/etc);
-  {% endhighlight %}
+  @import "styles/carts";
+  @import url(//fonts.googleapis.com/etc);
+{% endhighlight %}
 
 * The only files in the `assets/stylesheets` directory should be Sprockets
   manifest files and css files with import directives.
@@ -74,66 +75,70 @@ assets/stylesheets
 
 * Use meaningful or generic id/class names instead of presentational names.  Names
   should describe the *purpose*  of the element in question.
-* {% highlight css %}
-    /* good */
-    #header {}
-    #footer {}
-    .video {}
 
-    /* bad */
-    .small-font {}
-    .float-left {}
-    .clear {}
-    #kotisid-12345 {}
-    #uniq9282 {}
-  {% endhighlight %}
+{% highlight css %}
+  /* good */
+  #header {}
+  #footer {}
+  .video {}
+
+  /* bad */
+  .small-font {}
+  .float-left {}
+  .clear {}
+  #kotisid-12345 {}
+  #uniq9282 {}
+{% endhighlight %}
 
 * Elements that occur **exactly once** should use IDs, otherwise, use classes.
 * When naming classes and IDs, split words using hyphens, not underscores.
 * When styling a component, prefer an element + class namespace over element + id.
   Use as little specificity as possible.
-* {% highlight html %}
-    <ul class="category-list">
-      <li class="item">Category 1</li>
-      <li class="item">
-        <a href="category2.html">Category 2</a>
-      </li>
-    </ul>
-  {% endhighlight %}
 
-* {% highlight css %}
-    .category-list { /* element + class namespace */
+{% highlight html %}
+  <ul class="category-list">
+    <li class="item">Category 1</li>
+    <li class="item">
+      <a href="category2.html">Category 2</a>
+    </li>
+  </ul>
+{% endhighlight %}
 
-      /* this selects only direct descendants */
-      > li {
-        list-style-type: none;
-      }
+{% highlight css %}
+  .category-list { /* element + class namespace */
 
-      /* minimum specificity */
-      a {
-        color: #e6b;
-      }
+    /* this selects only direct descendants */
+    > li {
+      list-style-type: none;
     }
-  {% endhighlight %}
+
+    /* minimum specificity */
+    a {
+      color: #e6b;
+    }
+  }
+{% endhighlight %}
 
 * If you're using an ID selector, ensure you do not use more than one in your
   rule declaration:
-* {% highlight css %}
-    /* this is too specific */
-    #header .search-bar #search-results {}
-  {% endhighlight %}
+
+{% highlight css %}
+  /* this is too specific */
+  #header .search-bar #search-results {}
+{% endhighlight %}
 
 * Classes named `disabled`, `danger`, `hover`, `selected`, `active` should
   always be namespaced by an element.
-* {% highlight css %}
-    /* good */
-    option.selected {}
-    button.danger {}
 
-    /* bad */
-    .selected {}
-    .danger {}
-  {% endhighlight %}
+{% highlight css %}
+  /* good */
+  option.selected {}
+  button.danger {}
+
+  /* bad */
+  .selected {}
+  .danger {}
+{% endhighlight %}
 
 ## Coding Style
 
@@ -161,23 +166,23 @@ assets/stylesheets
   reconsider the specificity or the layout.
 * Nested rules should come AFTER the properties from the parent rule.
 
-* {% highlight scss %}
-    /* Example of good basic formatting practices */
-    .styleguide-format {
-      background-color: rgba(0, 0, 0, .5);
-      border: 1px solid #0f0;
-      color: #000;
-      .nested-item {
-        color: #f00;
-      }
+{% highlight scss %}
+  /* Example of good basic formatting practices */
+  .styleguide-format {
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid #0f0;
+    color: #000;
+    .nested-item {
+      color: #f00;
     }
+  }
 
-    /* Example of individual selectors getting their own lines */
-    .multiple,
-    .classes,
-    .get-new-lines {
-      display: block;
-    }
+  /* Example of individual selectors getting their own lines */
+  .multiple,
+  .classes,
+  .get-new-lines {
+    display: block;
+  }
 {% endhighlight %}
 
 ## Miscellaneous

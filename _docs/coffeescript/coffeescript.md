@@ -6,7 +6,7 @@ permalink: /docs/coffeescript/
 
 # CoffeeScript
 
-CoffeeScript is our preferred scripting language for the Rails conversion.  You
+CoffeeScript is our preferred scripting language for the Rails conversion.<sup>*</sup>  You
 should make an attempt use CoffeeScript, though some vendor-specific code may be
 difficult and confusing to integrate and Javascript may be easier and more readable.
 If you're using Javascript, please leave a brief block-comment note at the top of
@@ -28,19 +28,21 @@ time and understand why a decision was made.
 
 * When declaring functions, use a single space after the closing parentheses
   of the argument list.
-* {% highlight ruby %}
-    my_method = (arg1, arg2) -> # good
-    my_method = (arg1, arg2)-> # bad
-  {% endhighlight %}
+
+{% highlight ruby %}
+  my_method = (arg1, arg2) -> # good
+  my_method = (arg1, arg2)-> # bad
+{% endhighlight %}
 
 * When chaining method calls and the code doesn't fit on one line, EVERY call
   should be on a separate line and indented one level:
-* {% highlight coffeescript %}
-    [1..3]
-      .map((x) -> x * x)
-      .concat([10..12])
-      .filter((x) -> x < 11)
-  {% endhighlight %}
+
+{% highlight coffeescript %}
+  [1..3]
+    .map((x) -> x * x)
+    .concat([10..12])
+    .filter((x) -> x < 11)
+{% endhighlight %}
 
 * Choose to omit or include parentheses when calling functions in a way that
   optimizes readability.
@@ -50,3 +52,6 @@ time and understand why a decision was made.
 * Favor `unless` over `if` for negative conditions.
 * Do not use `else` with `unless`.  Rewrite to `if..else`.
 * Prefer string interpolation over concatenation.
+
+___
+<small><sup>*</sup>As time has gone on, this is not necessarily true. Consistency is key -- use your best judgment. (Feb 2018)</small>
