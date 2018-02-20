@@ -151,6 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (= 1.16.1)
   font-awesome-sass
   github-pages
   pygments.rb
