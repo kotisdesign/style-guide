@@ -99,9 +99,9 @@ branch.
 This is *production-ready* code, but may or may not be live.
 
 All *features* should be created from this branch:
-  {% highlight bash %}
-  git checkout -b <feature-branch-name> develop
-  {% endhighlight %}
+{% highlight bash %}
+git checkout -b <feature-branch-name> develop
+{% endhighlight %}
 
 Do not merge your own PRs into `develop`, and ***take extreme care*** *to avoid
 committing directly to this branch*.

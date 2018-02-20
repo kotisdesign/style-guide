@@ -21,19 +21,20 @@ permalink: /docs/javascript/
 
 ## Functions
 
-* Nested functions are okay.
-* Do not declare functions within blocks.
-* {% highlight javascript %}
-    // bad
-    if (x) {
-      function foo() {};
-    }
+* Nested functions are okay; but
+* DO NOT declare functions within blocks:
 
-    // good
-    if (x) {
-      var foo = function() {};
-    }
-  {% endhighlight %}
+{% highlight javascript %}
+  // bad
+  if (x) {
+    function foo() {};
+  }
+
+  // good
+  if (x) {
+    var foo = function() {};
+  }
+{% endhighlight %}
 
 ## Other
 
